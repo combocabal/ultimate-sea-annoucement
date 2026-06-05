@@ -53,25 +53,34 @@ body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-
 .search-wrap input::placeholder{color:var(--text3);}
 .search-wrap input:focus{background:var(--surface2);}
 .s-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:15px;pointer-events:none;}
-.tbl-wrap{background:var(--surface);border-radius:10px;overflow:hidden;}
+.tbl-wrap{background:var(--surface);border-radius:10px;overflow-x:auto;}
 .tbl-bar{height:3px;background:linear-gradient(90deg,var(--accent1) 0%,var(--accent3) 50%,var(--accent1) 100%);}
-table{width:100%;border-collapse:collapse;font-size:16px;}
+table{width:100%;border-collapse:collapse;font-size:15px;table-layout:fixed;}
 thead tr{background:var(--surface2);}
-th{font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.5px;color:var(--text2);text-transform:uppercase;padding:16px 18px;text-align:left;}
-th:first-child{width:56px;text-align:center;}
+th{font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.5px;color:var(--text2);text-transform:uppercase;padding:14px 12px;text-align:left;}
+th:nth-child(1){width:52px;text-align:center;}
+th:nth-child(2){width:18%;}
+th:nth-child(3){width:13%;}
+th:nth-child(4){width:28%;}
+th:nth-child(5){width:11%;}
+th:nth-child(6){width:8%;}
+th:nth-child(7){width:10%;}
 tbody tr{transition:background .1s;}
 tbody tr:hover{background:var(--surface2);}
-td{padding:15px 18px;vertical-align:middle;}
-td:first-child{text-align:center;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text2);font-weight:600;}
-.td-name{font-size:17px;font-weight:700;color:#ffffff;}
-.br{display:inline-flex;align-items:center;gap:4px;background:rgba(245,158,11,0.12);color:#fcd34d;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.5px;padding:5px 12px;border-radius:4px;white-space:nowrap;border:none;}
-.td-aid{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text2);max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+td{padding:13px 12px;vertical-align:middle;overflow:hidden;}
+td:first-child{text-align:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text2);font-weight:600;}
+.td-name{font-size:16px;font-weight:700;color:#ffffff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.br{display:inline-flex;align-items:center;gap:4px;background:rgba(245,158,11,0.12);color:#fcd34d;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.3px;padding:4px 10px;border-radius:4px;white-space:nowrap;border:none;}
+.td-aid{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;}
 .td-aid-err{color:#ff5555!important;font-weight:700!important;}
-.st{display:inline-flex;align-items:center;gap:5px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:#4ade80;letter-spacing:0.5px;}
+.st{display:inline-flex;align-items:center;gap:5px;font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;color:#4ade80;letter-spacing:0.3px;}
 .sd{width:6px;height:6px;border-radius:50%;background:#4ade80;}
 .reg{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;font-weight:700;padding:4px 10px;border-radius:4px;border:none;}
 .reg.SEA{background:rgba(56,189,248,0.12);color:#38bdf8;}
 .no-res{text-align:center;padding:56px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;}
+.claim-btn{display:inline-flex;align-items:center;gap:5px;color:#fff;text-decoration:none;font-family:'Outfit',sans-serif;font-size:12px;font-weight:700;background:linear-gradient(135deg,var(--accent1),var(--accent2));padding:6px 12px;border-radius:6px;transition:all .15s;white-space:nowrap;letter-spacing:0.3px;}
+.claim-btn:hover{filter:brightness(1.2);transform:translateY(-1px);box-shadow:0 4px 14px var(--glow-mid);}
+.claim-btn-disabled{display:inline-flex;align-items:center;gap:5px;color:var(--text3);font-family:'Outfit',sans-serif;font-size:12px;font-weight:600;background:var(--surface2);padding:6px 12px;border-radius:6px;white-space:nowrap;cursor:not-allowed;letter-spacing:0.3px;}
 .flagged-notice{display:flex;align-items:flex-start;gap:14px;background:rgba(255,60,60,0.08);border:1px solid rgba(255,60,60,0.3);border-radius:10px;padding:16px 20px;margin-bottom:18px;}
 .fn-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
 .fn-body{font-family:'Outfit',sans-serif;font-size:14px;line-height:1.7;color:var(--text2);}
@@ -87,13 +96,38 @@ tr.flagged-row:hover{background:rgba(255,50,50,0.12)!important;}
 .fb-btn:hover{background:var(--pill-bg);color:var(--accent3);transform:translateY(-2px);}
 .fb-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;font-weight:700;color:var(--bg);background:var(--accent3);padding:3px 8px;border-radius:4px;text-transform:uppercase;flex-shrink:0;}
 .footer{text-align:center;margin-top:48px;padding-top:28px;color:var(--text2);font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:2px;line-height:2.4;}
+@media(max-width:768px){
+  /* hide Status (col 5) and Region (col 6) */
+  th:nth-child(5),td:nth-child(5),
+  th:nth-child(6),td:nth-child(6){display:none;}
+  table{table-layout:auto;}
+  th:nth-child(1){width:40px;}
+  th:nth-child(2),th:nth-child(3),th:nth-child(4),th:nth-child(7){width:auto;}
+  .td-name{font-size:14px;}
+  .td-aid{font-size:11px;}
+  td,th{padding:11px 8px;}
+}
 @media(max-width:600px){
-  .sw-version{display:none;}.hero-inner{padding:32px 16px 36px;}.ev-title{font-size:clamp(28px,8vw,44px);}
-  .stat{min-width:50%;}.stat::after{display:none;}.body{padding:24px 14px 60px;}
-  .toolbar{gap:6px;}.fgrp{width:100%;}.fbtn{flex:1;text-align:center;padding:8px 10px;}
-  .search-wrap{width:100%;margin-left:0;}.search-wrap input{width:100%;}
-  th:nth-child(4),td:nth-child(4),th:nth-child(5),td:nth-child(5),th:nth-child(6),td:nth-child(6){display:none;}
-  td,th{padding:11px 10px;font-size:13px;}.fb-btn{min-width:100%;flex:unset;}
+  .sw-version{display:none;}
+  .server-bar{padding:10px 14px;}
+  .server-name{font-size:20px;}
+  .hero-inner{padding:28px 14px 32px;}
+  .ev-title{font-size:clamp(26px,8vw,42px);}
+  .stats-inner{flex-wrap:wrap;}
+  .stat{min-width:50%;}.stat::after{display:none;}
+  .body{padding:20px 12px 56px;}
+  .toolbar{gap:6px;flex-direction:column;}
+  .fgrp{width:100%;display:grid;grid-template-columns:1fr 1fr;}
+  .fbtn{text-align:center;padding:8px 6px;font-size:13px;}
+  .search-wrap{width:100%;margin-left:0;}
+  .search-wrap input{width:100%;}
+  .tbl-wrap{border-radius:8px;}
+  td,th{padding:10px 8px;}
+  .td-name{font-size:14px;}
+  .td-aid{font-size:10px;}
+  .br{font-size:11px;padding:3px 7px;}
+  .claim-btn,.claim-btn-disabled{font-size:11px;padding:5px 8px;gap:3px;}
+  .fb-btn{min-width:100%;flex:unset;}
 }
 </style>
 </head>
@@ -129,7 +163,7 @@ tr.flagged-row:hover{background:rgba(255,50,50,0.12)!important;}
     
   </div><div class="search-wrap"><span class="s-ic">&#8981;</span><input type="text" placeholder="Search name or ID&hellip;" oninput="ds(this.value)"></div></div>
   <div class="tbl-wrap"><div class="tbl-bar"></div>
-  <table><thead><tr><th>#</th><th>Facebook Name</th><th>Reward</th><th>Account ID</th><th>Status</th><th>Region</th></tr></thead>
+  <table><thead><tr><th>#</th><th>Facebook Name</th><th>Reward</th><th>Account ID</th><th>Status</th><th>Region</th><th>Claim</th></tr></thead>
   <tbody id="tbody"></tbody></table>
   <div id="no-res" class="no-res" style="display:none">&mdash; No records found &mdash;</div></div>
   <div class="fb-strip" id="fb-strip"></div>
@@ -165,6 +199,7 @@ function render(){
       '<td class="'+aidCls+'">'+d.aid+'</td>'+
       '<td><span class="st"><span class="sd"></span>Delivered</span></td>'+
       '<td><span class="reg SEA">SEA</span></td>'+
+      '<td><a class="claim-btn" href="'+(d.c==='ID'?'https://cabalpc.com/main-reward-id':'https://cabalpc.com/main-reward-sea')+'" target="_blank">🎁 Claim</a></td>'+
     '</tr>';
   });
   tbody.innerHTML=html;
