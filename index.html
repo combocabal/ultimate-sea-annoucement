@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cabal: Ultimate COMBO SEA &mdash; SS7 Creative Contest Results</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#01050e;--surface:#0b1d34;--surface2:#102645;--accent1:#1d4ed8;--accent2:#3b82f6;--accent3:#38bdf8;--gold:#f59e0b;--text:#e2f0ff;--text2:#7aabda;--text3:#2e5a80;--glow-color:rgba(56,189,248,0.35);--glow-mid:rgba(29,78,216,0.22);--pill-bg:rgba(29,78,216,0.14);}
+body.pc-sea{--bg:#010e04;--surface:#0b2416;--surface2:#103020;--accent1:#15803d;--accent2:#22c55e;--accent3:#4ade80;--gold:#fbbf24;--text:#d8f5e4;--text2:#5fb87a;--text3:#1d4a2a;--glow-color:rgba(74,222,128,0.35);--glow-mid:rgba(21,128,61,0.22);--pill-bg:rgba(21,128,61,0.14);}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;min-height:100vh;overflow-x:hidden;}
+.server-bar{background:rgba(1,5,14,0.94);backdrop-filter:blur(14px);padding:10px 24px;display:flex;align-items:center;gap:10px;}
+.server-dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px rgba(74,222,128,0.8);flex-shrink:0;}
+.server-name{font-family:'Rajdhani',sans-serif;font-size:26px;font-weight:800;letter-spacing:4px;text-transform:uppercase;color:#4ade80;text-shadow:0 0 18px rgba(74,222,128,0.5);}
+.sw-version{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--text3);}
+.game-logo-wrap{display:flex;justify-content:center;align-items:center;padding:36px 24px 0;}
+.game-logo-wrap img{height:100px;width:auto;max-width:90%;mix-blend-mode:screen;filter:drop-shadow(0 0 28px var(--glow-color));}
+.hero{position:relative;padding:0;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 180% at 50% 110%,var(--glow-mid) 0%,transparent 60%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:44px 24px 48px;display:flex;flex-direction:column;align-items:center;}
+.game-badge{display:inline-flex;align-items:center;gap:8px;border-radius:20px;padding:7px 20px;margin-bottom:24px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--accent3);background:var(--pill-bg);}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--accent3);animation:blink 1.8s infinite;flex-shrink:0;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.15}}
+.week-badge{display:inline-flex;align-items:center;background:var(--pill-bg);border-radius:20px;padding:7px 20px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:3px;color:var(--accent3);margin-bottom:22px;}
+.ev-label{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:5px;color:var(--text3);text-transform:uppercase;margin-bottom:14px;}
+.ev-title{font-family:'Rajdhani',sans-serif;font-weight:800;font-size:clamp(38px,7vw,68px);line-height:1;letter-spacing:1px;text-align:center;text-transform:uppercase;margin-bottom:12px;text-shadow:0 0 50px var(--glow-color);}
+.ev-title span{background:linear-gradient(135deg,#fff 25%,var(--accent3) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.ev-sub{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:clamp(15px,2.5vw,24px);letter-spacing:6px;color:var(--gold);text-transform:uppercase;margin-bottom:30px;opacity:0.9;}
+.hero-notice{display:flex;align-items:flex-start;gap:12px;max-width:640px;background:var(--pill-bg);border-radius:10px;padding:16px 22px;margin-top:4px;}
+.notice-icon{font-size:18px;flex-shrink:0;margin-top:2px;}
+.notice-text{font-family:'Outfit',sans-serif;font-size:15px;line-height:1.7;color:var(--text2);text-align:left;}
+.notice-text strong{color:var(--accent3);font-weight:700;}
+.stats-strip{background:var(--surface);margin-top:2px;}
+.stats-inner{max-width:1040px;margin:0 auto;display:flex;flex-wrap:wrap;}
+.stat{flex:1;min-width:130px;padding:22px 0;text-align:center;position:relative;}
+.stat::after{content:'';position:absolute;top:25%;bottom:25%;right:0;width:1px;background:rgba(255,255,255,0.06);}
+.stat:last-child::after{display:none;}
+.stat-n{font-family:'Rajdhani',sans-serif;font-size:34px;font-weight:700;color:var(--accent3);display:block;letter-spacing:1px;}
+.stat-l{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--text3);text-transform:uppercase;margin-top:3px;}
+.body{max-width:1040px;margin:0 auto;padding:40px 20px 80px;}
+.tab-section-label{font-family:'Rajdhani',sans-serif;font-size:20px;font-weight:700;letter-spacing:1px;color:var(--text2);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.tab-section-label::before{content:'';width:4px;height:22px;background:linear-gradient(to bottom,var(--accent2),var(--accent3));border-radius:2px;flex-shrink:0;}
+.toolbar{display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap;}
+.fgrp{display:flex;gap:6px;flex-wrap:wrap;}
+.fbtn{background:var(--surface);border:none;color:var(--text3);font-family:'Rajdhani',sans-serif;font-size:15px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:8px 20px;border-radius:6px;cursor:pointer;transition:all .15s;}
+.fbtn:hover{background:var(--surface2);color:var(--text);}
+.fbtn.active{background:var(--pill-bg);color:var(--accent3);}
+.flt-flag{color:#ff6b6b!important;}
+.flt-flag.active{background:rgba(255,60,60,0.15)!important;color:#ff4444!important;}
+.search-wrap{margin-left:auto;position:relative;}
+.search-wrap input{background:var(--surface);border:none;border-radius:6px;color:var(--text);font-family:'Outfit',sans-serif;font-size:14px;padding:8px 14px 8px 36px;width:220px;outline:none;}
+.search-wrap input::placeholder{color:var(--text3);}
+.search-wrap input:focus{background:var(--surface2);}
+.s-ic{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:15px;pointer-events:none;}
+.tbl-wrap{background:var(--surface);border-radius:10px;overflow:hidden;}
+.tbl-bar{height:3px;background:linear-gradient(90deg,var(--accent1) 0%,var(--accent3) 50%,var(--accent1) 100%);}
+table{width:100%;border-collapse:collapse;font-size:16px;}
+thead tr{background:var(--surface2);}
+th{font-family:'Outfit',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.5px;color:var(--text2);text-transform:uppercase;padding:16px 18px;text-align:left;}
+th:first-child{width:56px;text-align:center;}
+tbody tr{transition:background .1s;}
+tbody tr:hover{background:var(--surface2);}
+td{padding:15px 18px;vertical-align:middle;}
+td:first-child{text-align:center;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--text2);font-weight:600;}
+.td-name{font-size:17px;font-weight:700;color:#ffffff;}
+.br{display:inline-flex;align-items:center;gap:4px;background:rgba(245,158,11,0.12);color:#fcd34d;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.5px;padding:5px 12px;border-radius:4px;white-space:nowrap;border:none;}
+.td-aid{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--text2);max-width:280px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.td-aid-err{color:#ff5555!important;font-weight:700!important;}
+.st{display:inline-flex;align-items:center;gap:5px;font-family:'Outfit',sans-serif;font-size:13px;font-weight:600;color:#4ade80;letter-spacing:0.5px;}
+.sd{width:6px;height:6px;border-radius:50%;background:#4ade80;}
+.reg{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;font-weight:700;padding:4px 10px;border-radius:4px;border:none;}
+.reg.SEA{background:rgba(56,189,248,0.12);color:#38bdf8;}
+.no-res{text-align:center;padding:56px;color:var(--text3);font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:2px;}
+.flagged-notice{display:flex;align-items:flex-start;gap:14px;background:rgba(255,60,60,0.08);border:1px solid rgba(255,60,60,0.3);border-radius:10px;padding:16px 20px;margin-bottom:18px;}
+.fn-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.fn-body{font-family:'Outfit',sans-serif;font-size:14px;line-height:1.7;color:var(--text2);}
+.fn-body strong{color:#ff6b6b;font-weight:700;}
+.fn-red{color:#ff4444;font-weight:700;}
+tr.flagged-row td.td-name{color:#ff3b3b!important;font-weight:800!important;text-shadow:0 0 12px rgba(255,59,59,0.4);}
+tr.flagged-row{background:rgba(255,50,50,0.06)!important;}
+tr.flagged-row:hover{background:rgba(255,50,50,0.12)!important;}
+.flagged-tag{display:inline-flex;align-items:center;background:rgba(255,60,60,0.15);color:#ff5555;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:1px;padding:2px 7px;border-radius:3px;margin-left:6px;vertical-align:middle;font-weight:700;}
+.fb-strip{display:flex;align-items:center;gap:10px;margin-top:40px;padding:20px;background:var(--surface);border-radius:12px;flex-wrap:wrap;}
+.fb-label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:var(--text3);flex-shrink:0;width:100%;margin-bottom:6px;}
+.fb-btn{display:inline-flex;align-items:center;gap:10px;color:var(--text);text-decoration:none;font-family:'Outfit',sans-serif;font-size:14px;font-weight:600;background:var(--surface2);padding:11px 16px;border-radius:8px;transition:all .2s;border:none;flex:1;min-width:160px;justify-content:space-between;}
+.fb-btn:hover{background:var(--pill-bg);color:var(--accent3);transform:translateY(-2px);}
+.fb-tag{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:2px;font-weight:700;color:var(--bg);background:var(--accent3);padding:3px 8px;border-radius:4px;text-transform:uppercase;flex-shrink:0;}
+.footer{text-align:center;margin-top:48px;padding-top:28px;color:var(--text2);font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:2px;line-height:2.4;}
+@media(max-width:600px){
+  .sw-version{display:none;}.hero-inner{padding:32px 16px 36px;}.ev-title{font-size:clamp(28px,8vw,44px);}
+  .stat{min-width:50%;}.stat::after{display:none;}.body{padding:24px 14px 60px;}
+  .toolbar{gap:6px;}.fgrp{width:100%;}.fbtn{flex:1;text-align:center;padding:8px 10px;}
+  .search-wrap{width:100%;margin-left:0;}.search-wrap input{width:100%;}
+  th:nth-child(4),td:nth-child(4),th:nth-child(5),td:nth-child(5),th:nth-child(6),td:nth-child(6){display:none;}
+  td,th{padding:11px 10px;font-size:13px;}.fb-btn{min-width:100%;flex:unset;}
+}
+</style>
+</head>
+<body class="pc-sea">
+
+<div class="server-bar"><span class="server-dot"></span><span class="server-name">PC-SEA</span><span class="sw-version">Cabal: Ultimate COMBO SEA &nbsp;&middot;&nbsp; SS7 Creative Contest Results</span></div>
+
+<div class="game-logo-wrap"><img src="logo_CBPC.png" alt="Cabal: Ultimate COMBO SEA" onerror="this.style.display='none'"></div>
+
+<div class="hero"><div class="hero-inner">
+  <div class="game-badge"><span class="badge-dot"></span><span>CABAL: ULTIMATE COMBO SEA</span></div>
+  <div class="week-badge">SS7 / June 2026</div>
+  <p class="ev-label">Cabal Creative Contest</p>
+  <h1 class="ev-title"><span>Winner Announcement</span></h1>
+  <p class="ev-sub">Season 7 Results</p>
+  <div class="hero-notice"><span class="notice-icon">&#127881;</span><span class="notice-text">Thank you for joining <strong>SS7 Cabal Creative Contest!</strong> Winners please log in to the game to receive your reward within <strong>7 days</strong> of distribution.</span></div>
+</div></div>
+
+<div class="stats-strip"><div class="stats-inner">
+  <div class="stat"><span class="stat-n">4</span><span class="stat-l">Total Winners</span></div>
+  <div class="stat"><span class="stat-n">1</span><span class="stat-l">Guru Reporter</span></div>
+  <div class="stat"><span class="stat-n">3</span><span class="stat-l">Freestyle Creator</span></div>
+  
+</div></div>
+
+<div class="body">
+  <div class="tab-section-label">SS7 Cabal Creative Contest &mdash; All Winners</div>
+  
+  <div class="toolbar"><div class="fgrp">
+    <button class="fbtn active" onclick="sf('ALL',this)">All</button>
+    <button class="fbtn" onclick="sf('GURU',this)">Guru Reporter</button>
+    <button class="fbtn" onclick="sf('FREE',this)">Freestyle Creator</button>
+    
+  </div><div class="search-wrap"><span class="s-ic">&#8981;</span><input type="text" placeholder="Search name or ID&hellip;" oninput="ds(this.value)"></div></div>
+  <div class="tbl-wrap"><div class="tbl-bar"></div>
+  <table><thead><tr><th>#</th><th>Facebook Name</th><th>Reward</th><th>Account ID</th><th>Status</th><th>Region</th></tr></thead>
+  <tbody id="tbody"></tbody></table>
+  <div id="no-res" class="no-res" style="display:none">&mdash; No records found &mdash;</div></div>
+  <div class="fb-strip" id="fb-strip"></div>
+  <div class="footer"><p>CABAL: ULTIMATE COMBO SEA &nbsp;&middot;&nbsp; Official SS7 Cabal Creative Contest Winner Announcement &nbsp;&middot;&nbsp; 2026</p><p>Winners please log in to the game to receive your reward within 7 days.</p></div>
+</div>
+
+<script>
+const DATA=[
+        {no:1,name:'Pyta',aid:'WCQUMJHXRH25LPN4PYGWYNAZD',c:'SEA',flagged:false,cat:'Guru Reporter'},
+        {no:2,name:'Berzerk',aid:'OVXQOVUMN2KCYSRZTFSWVV0ML',c:'SEA',flagged:false,cat:'Freestyle Creator'},
+        {no:3,name:'babycute',aid:'7EMLY7FIFILR0F0QRM4AH61LK',c:'SEA',flagged:false,cat:'Freestyle Creator'},
+        {no:4,name:'MadamCalista',aid:'KC2TGZ4WIDI7QJUHMOLPRUD57',c:'SEA',flagged:false,cat:'Freestyle Creator'}
+];
+const SOCIAL=[{label:'EN',href:'https://www.facebook.com/CabalComboSEA',name:'Cabal: Ultimate COMBO'},{label:'PH',href:'https://www.facebook.com/CabalComboSEAPH',name:'Cabal: Ultimate COMBO'},{label:'ID',href:'https://www.facebook.com/CabalComboSEAID',name:'Cabal: Ultimate COMBO'}];
+let filt='ALL',q='';
+function render(){
+  var rows=DATA.filter(function(d){
+    return (filt==='ALL'||(filt==='GURU'&&d.cat==='Guru Reporter')||(filt==='FREE'&&d.cat==='Freestyle Creator')||(filt==='FLAG'&&d.flagged))&&
+      (!q||d.name.toLowerCase().includes(q)||d.aid.toLowerCase().includes(q));
+  });
+  var tbody=document.getElementById('tbody');
+  var noRes=document.getElementById('no-res');
+  if(!rows.length){tbody.innerHTML='';noRes.style.display='block';return;}
+  noRes.style.display='none';
+  var html='';
+  rows.forEach(function(d,i){
+    var flagTag=d.flagged?'<span class="flagged-tag">&#9888; AID ERROR</span>':'';
+    var aidCls=d.flagged?'td-aid td-aid-err':'td-aid';
+    html+='<tr class="'+(d.flagged?'flagged-row':'')+'">'+
+      '<td>'+String(i+1).padStart(2,'0')+'</td>'+
+      '<td class="td-name">'+d.name+flagTag+'</td>'+
+      '<td><span class="br">'+d.cat+'</span></td>'+
+      '<td class="'+aidCls+'">'+d.aid+'</td>'+
+      '<td><span class="st"><span class="sd"></span>Delivered</span></td>'+
+      '<td><span class="reg SEA">SEA</span></td>'+
+    '</tr>';
+  });
+  tbody.innerHTML=html;
+}
+function sf(r,btn){filt=r;document.querySelectorAll('.fbtn').forEach(function(b){b.classList.remove('active');});btn.classList.add('active');render();}
+function ds(v){q=v.toLowerCase();render();}
+var fbIcon='<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>';
+document.getElementById('fb-strip').innerHTML='<span class="fb-label">Follow Us</span>'+SOCIAL.map(function(s){return '<a class="fb-btn" href="'+s.href+'" target="_blank">'+fbIcon+'<span>'+s.name+'</span><span class="fb-tag">'+s.label+'</span></a>';}).join('');
+render();
+</script>
+</body>
+</html>
